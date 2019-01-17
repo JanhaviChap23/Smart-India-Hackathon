@@ -1,0 +1,349 @@
+<html>
+<head>
+<title>
+Visualisation page
+</title>
+<!--<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/stylesheet.css')}}">-->
+<style type="text/css">
+  
+#box1
+{ 
+  width: 1280px;
+  height:1300px;
+  margin-bottom: 20px;
+  border: 5px solid #A21FA2;}
+
+  #boxtable
+{ 
+  width: 550px;
+  height: 230px;
+  margin-bottom: 20px;
+  margin-top : 35px;
+  border: 1px solid black;
+  margin-left : 20px;
+  float : left;}
+
+
+
+table, td, th {
+  border: 2px solid black;
+  margin-left : 20px;
+  margin-top : 15px;
+  margin-bottom : 15px;
+  margin-right : 15px;
+
+}
+
+
+#box0
+{ 
+  width: 600px;
+  height: 230px;
+  margin-right : 6px;
+  margin-left : 650px;
+  margin-top : -230px;
+  float : left;
+  border: 1px solid black;
+  }
+  
+  #box0.1
+{ 
+  width: 580px;
+  height: 200px;
+  margin-right : 5px;
+  margin-left : 5px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+ 
+  border: 1px solid black;
+  }
+
+
+#box2
+{ 
+  width: 600px;
+  height: 135px;
+  
+  margin-right : -630px;
+  margin-left : 10px;
+  margin-top : 50px;
+  float : left;
+  border: 1px solid black;
+  background:   #4169E1;
+  }
+  
+  #box3
+{ 
+  
+  width: 590px;
+  height: 125px;
+  margin-right : 5px;
+  margin-left : 5px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+ background:   #4169E1;
+  border: 1px solid black;
+  }
+
+    #box22
+{
+width:605px;
+height:135px;
+border:1px solid #000;
+margin-top:70px;
+margin-left: 650px; 
+margin-right: 10px; 
+background:   #4169E1;
+ 
+}
+
+#box32
+{
+width:600px;
+height:125px;
+border:1px solid #000;
+margin-top:8px;
+margin-left:8px;  
+margin-right:6px;
+margin-bottom:06px; 
+background:   #4169E1;
+
+}
+  
+   #box23
+{
+width:660px;
+height:135px;
+border:1px solid #000;
+margin-top:-120px;
+margin-left: 30px; 
+background:   #4169E1;  
+}
+
+#box33
+{
+width:640px;
+height:125px;
+border:1px solid #000;
+margin-top:8px;
+margin-left:8px;  
+margin-right:8px;
+margin-bottom:8px; 
+background:   #4169E1;
+}
+
+ #box411
+{
+width:605px;
+height:135px;
+border:1px solid #000;
+margin-top:20px;
+margin-left: 8px;   
+background:   #4169E1;
+}
+
+#box422
+{
+width:590px;
+height:125px;
+border:1px solid #000;
+margin-top:8px;
+margin-left:8px;  
+margin-right:8px;
+margin-bottom:8px; 
+background:   #4169E1;
+}
+
+#box511
+{
+width:605px;
+height:135px;
+border:1px solid #000;
+margin-top:-138px;
+margin-left: 650px;  
+background:   #4169E1; 
+}
+
+#box522
+{
+width:590px;
+height:125px;
+border:1px solid #000;
+margin-top:8px;
+margin-left:8px;  
+margin-right:8px;
+margin-bottom:8px; 
+background:   #4169E1;
+}
+
+#box611
+{
+width:605px;
+height:135px;
+border:1px solid #000;
+margin-top:15px;
+margin-left: 320px; 
+ background:   #4169E1;
+}
+
+#box622
+{
+width:590px;
+height:125px;
+border:1px solid #000;
+margin-top:8px;
+margin-left:8px;  
+margin-right:8px;
+margin-bottom:8px; 
+background:   #4169E1;
+}
+
+</style>
+    
+<!--<script type="text/javascript" href="{{url_for('static',filename='date_time.js')}}"></script>-->
+
+ <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.9.1.min.css" type="text/css" />
+ <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.9.1.min.js"></script>
+ {{bokeh_css | safe}}
+ {{ script1 | safe }}
+ {{ script0 | safe }}
+  {{ script2 | safe }}
+ {{ script3 | safe }}
+ {{ script4 | safe }}
+</head>
+<body bgcolor="white">
+
+<h2>Visualisation Page</h2>
+<h2>Mess Manager Dashboard</h2>
+
+
+<nav>
+  <ul>
+    <li><strong>Home</strong></li>
+    <li><a href="predict">Predict</a></li>
+  <li><a href="UpdateConsumption.html">Consumption</a></li>
+    <li><a href="UpdateEvent.html">UpdateEvent</a></li>
+  <li><a href="menu.html">Update_Menu</a></li>
+    <li><a href="sample">Review</a></li>
+    
+  </ul>
+</nav>
+<!--Outer box-->
+<div id="box1">
+
+
+<!--First table-->
+<div id="boxtable">
+<!--  {{ tables|safe }}-->
+
+<iframe src="/generatetable" width="550px" height="230px">
+</iframe>
+<!--<table>
+  <tr>
+    <th>Shift</th>
+    <th>Date</th>
+	<th>No. of <br><br>actual <br><br> dinners</th>
+	<th>No. of <br><br>predicted <br><br> dinners</th>
+	<th>No. of<br><br> people in <br><br> hostel</th>
+	<th>Average <br><br> Wastage <br><br>(*Dubious)</th>
+  </tr>
+  <tr>
+    <td>
+	<br>
+	A/B/C
+	<br>
+	<br>
+	</td>
+    <td>
+    	
+	<span id="date_time"></span>
+           <script type="text/javascript"> window.onload = date_time('date_time');</script>
+   	</td>
+  </tr>
+  
+</table>-->
+</boxtable>
+
+<div id="box0">
+<div id="box0.1">
+<h3>{{minimun_breakfast_wastage | safe }} </h3>
+<h3>{{maximum_breakfast_wastage | safe }} </h3>
+<h3>{{minimun_Lunch_wastage | safe }} </h3>
+<h3>{{maximum_lunch_wastage | safe }} </h3>
+<h3>{{minimun_dinner_wastage | safe }} </h3>
+<h3>{{maximum_dinner_wastage | safe }} </h3>
+
+  </div>
+</div>
+
+<!--Second box-->
+<h3 align="center"> Visualisation showing Actual and Predicted dinners</h3>
+<!-- <h5>Mess-0</h5>-->
+<div id="box2">
+<div id="box3">
+
+
+{{bokeh_js |safe }}
+{{ div0 | safe }}
+
+</div>
+</div>
+
+<!--<h5>Mess-1</h5>-->
+<div id="box22">
+<div id="box32">
+
+{{bokeh_js |safe }}
+{{ div1 | safe }}
+</div>
+</div>
+
+
+
+  <div id="box411">
+
+<div id="box422">
+<!--<p><h5>Mess-2</h5></p>-->
+{{bokeh_js |safe }}
+{{ div2 | safe }}
+</div>
+</div>
+
+<!--<div id="box62"></div>
+-->
+
+<div id="box511">
+<div id="box522">
+<!--<p><h5>Mess-3</h5></p>-->
+{{bokeh_js |safe }}
+{{ div3 | safe }}
+</div>
+
+</div>
+<div id="box611">
+<div id="box622">
+{{bokeh_js |safe }}
+{{ div4 | safe }} 
+<p><h5>Mess-4</h5></p>
+
+</div>
+
+</div>
+<!--
+<div id="box43">
+<div id="box431">
+</div>
+</div>
+<div id="box53"></div>
+<div id="box63"></div>
+-->
+<!--latetsstart
+<div id="box411">
+<div id="box422">
+</div>
+</div>enddd-->
+</div>
+
+</body>
+</html>
+

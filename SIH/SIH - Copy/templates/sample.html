@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+    color: orange;
+}
+</style>
+</head>
+<body style="background-color:powderblue;" align:'center'>
+	<h2>Review Form</h2>
+  <form method="POST">
+  <br>
+  Enter Student ID: <input type="text" name="sID">
+  <br>
+  <br>
+  <br>
+    Review: <input type="text" name="review"><br>
+  <!--Type of Meal : <input type="text" name="emailid"><br>-->
+  <br>
+  <br>
+   <div class="form-group">
+      <br>
+       <label class="control-label col-sm-2" for="country">Type of Food:</label>
+       <select id="country" name="country">
+      <option  selected value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+
+    </div>
+	<br>
+	<br>
+	 <div class="form-group">
+      <br>
+       <label class="control-label col-sm-1" for="star">Ratings:</label>
+       <select id="star" name="star">
+      <option selected value="1">1</option>
+      <option  value="2">2</option>
+      <option value="3">3</option>
+	  <option value="3">4</option>
+	  <option value="3">5</option>
+    </select>
+
+    </div>
+	
+	
+<!--Enter type of Meal
+<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>-->
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

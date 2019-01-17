@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' href="/static/style.css" type="text/css">
+
+<head>
+<title> predict diners</title>
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="mt-5"> how many ppl will dine</h1>
+		<p> hello</p>
+		<div class="row">
+			<div class="col-lg-6">
+				<form action="/predict" method="post" id="titanic_predict">
+				<div>
+				<label for="name">Special Ocassion</label>	
+				<select name="predict_class">
+					<option value="Exam"> Exam</option>
+					<option value="Fest"> Fest</option>
+					<option value="Regular"> Regular</option>
+				</select>
+			</div>
+			<div>
+				<label for="name">Shift B,L,D</label>	
+				<select name="predict_age">
+					<option value="B"> Breakfast</option>
+					<option value="L"> Lunch</option>
+					<option value="D"> Dinner</option>
+				</select>
+			</div>
+			<div>
+				<label for="name">Today or Tommorrow</label>	
+				<select name="predict_sibsp">
+					<option value="Today"> Today</option>
+					<option value="Tommorrow"> Tommorrow</option>
+				</select>
+			</div>
+			<button class="btn-primary btn-large btn-block" type="submit" form='titanic_predict' value="Submit">Predict</button>
+		</form>
+	</div>
+
+	<div class="col-lg-6">
+		{%if data.prediction %}
+		<h1>{{data.prediction}}</h1>
+		<h5>Day: {{data.form.predict_sibsp}}</h5>
+		<h5>Special Occassion: {{data.form.predit_class}}</h5>
+		<h5>Shift : {{data.form.predict_age}}</h5>
+		{% endif %}
+
+		<iframe src="/tablequant" width="550px" height="230px">
+</iframe>
+
+	</div>
+	</div>	
+	</div>
+
+	<script src="static/vendor/jquery/jquery.min.js"></script>
+	<script src="static/vendor/popper/popper.min.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+	
